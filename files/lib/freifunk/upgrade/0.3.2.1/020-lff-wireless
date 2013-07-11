@@ -1,6 +1,0 @@
-#!/bin/sh
-
-uci -q batch <<EOF
-set wireless.wifi_mesh.mcast_rate='12000'
-commit wireless
-EOF
