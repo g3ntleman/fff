@@ -18,8 +18,14 @@ set wireless.wifi_mesh='wifi-iface'
 set wireless.wifi_mesh.device='radio0'
 set wireless.wifi_mesh.network='mesh'
 set wireless.wifi_mesh.mode='adhoc'
+<<<<<<< HEAD:files/lib/freifunk/upgrade/initial/020-kbu-wireless
 set wireless.wifi_mesh.ssid='02:d1:11:37:fc:39'
 set wireless.wifi_mesh.bssid='02:d1:11:37:fc:39'
+=======
+set wireless.wifi_mesh.ssid='02:d1:11:37:fc:38'
+set wireless.wifi_mesh.bssid='02:d1:11:37:fc:38'
+set wireless.wifi_mesh.mcast_rate='12000'
+>>>>>>> luebeck/v0.3.x:files/lib/freifunk/upgrade/initial/020-lff-wireless
 
 commit wireless
 EOF
