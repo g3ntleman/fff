@@ -12,4 +12,4 @@ config fastd mesh_vpn
 	option mode 'tap'
 	
 	option interface 'mesh-vpn'
-	option mtu 1426
+	option mtu 1376
