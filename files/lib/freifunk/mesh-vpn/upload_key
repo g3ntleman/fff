@@ -1,13 +1,11 @@
 #!/bin/sh
+	## Key-Upload
+        URL_1='http://fastd1.kbu.freifunk.net'
+        URL_2='http://fastd2.kbu.freifunk.net'
+        URL_3='http://fastd3.kbu.freifunk.net'
+        URL_4='http://fastd4.kbu.freifunk.net'
 
-UPLOAD_URL=$1
-MAC=${2//:/}
-KEY=`/usr/sbin/fastd --machine-readable --show-key -c /tmp/fastd/secret.mesh_vpn.conf`
-WGETC=`which wget`
-VERSION=$(cat /etc/freifunk_version)
-
-while [ 1 = 1 ]
-do
-        $WGETC -q --post-data "nodeid=${MAC}&key=${KEY}&fw_version=${VERSION}" $UPLOAD_URL -O - && break
-	sleep 30
-done
+        /lib/freifunk/mesh-vpn/upload_key_to_server $URL_1 &
+        /lib/freifunk/mesh-vpn/upload_key_to_server $URL_2 &
+        /lib/freifunk/mesh-vpn/upload_key_to_server $URL_3 &
+        /lib/freifunk/mesh-vpn/upload_key_to_server $URL_4 &
