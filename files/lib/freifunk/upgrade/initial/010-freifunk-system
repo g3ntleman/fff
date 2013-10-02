@@ -6,8 +6,7 @@ board="$(ar71xx_board_name)"
 
 case "$board" in
 tl-wdr3600|\
-tl-wdr4300|
-tl-wdr3500)
+tl-wdr4300)
 	macaddr="$(uci get wireless.radio1.macaddr)"
 
 	uci -q batch <<EOF
@@ -35,8 +34,8 @@ EOF
 esac
 
 uci -q batch <<EOF
-	set system.@system[0].hostname='${macaddr//:/}'
+	set system.@system[0].hostname='Freifunk-${macaddr//:/}'
 	set system.@system[0].timezone='CET-1CEST,M3.5.0,M10.5.0/3'
-	set freifunk.node.nodeid='${macaddr//:/}'
+	set freifunk.node.nodeid='${macaddr//:/}
 	commit system
 EOF
