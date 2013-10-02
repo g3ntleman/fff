@@ -10,6 +10,7 @@ config fastd mesh_vpn
 
 	list method 'xsalsa20-poly1305'
 	option mode 'tap'
+	option secret 'generate'
 	
 	option interface 'mesh-vpn'
 	option mtu 1376
