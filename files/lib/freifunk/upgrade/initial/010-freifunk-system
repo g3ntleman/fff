@@ -36,6 +36,6 @@ esac
 uci -q batch <<EOF
 	set system.@system[0].hostname='Freifunk-${macaddr//:/}'
 	set system.@system[0].timezone='CET-1CEST,M3.5.0,M10.5.0/3'
-	set freifunk.@bnode[0].nodeid='${macaddr//:/}'
+	set freifunk.@node[0].nodeid='${macaddr//:/}'
 	commit system
 EOF
