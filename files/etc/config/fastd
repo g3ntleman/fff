@@ -13,4 +13,4 @@ config fastd mesh_vpn
 	option secret 'generate'
 	
 	option interface 'mesh-vpn'
-	option mtu 1376
+	option mtu 1426
